@@ -16,7 +16,7 @@
     margin: auto;
     font-size: 30vw;
     font-weight: 900;
-    -webkit-text-stroke: 1.5px red;
+    -webkit-text-stroke: 1.5px #2670ca;
     -webkit-text-fill-color: white;
     z-index: 10;
 }
@@ -24,6 +24,9 @@
 body {
     font-family: Roboto, sans-serif;
     overflow: hidden;
+    background-color: black;
+    color: white;
+    /* background-image: url("../img/320px.jpg"); */
 }
 
 body.is-flexible {
@@ -49,8 +52,8 @@ h1 {
     line-height: 1.1;
     letter-spacing: 5px;
     text-transform: uppercase;
-    -webkit-text-stroke: 1.5px black;
-    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1.5px white;
+    -webkit-text-fill-color: black;
     padding-bottom: 40px;
     padding-top: 16px;
 }
@@ -81,7 +84,7 @@ h2 a {
 }
 
 h2 a:hover {
-    color: red;
+    color: #2670ca;
 }
 
 h3 {
@@ -118,14 +121,14 @@ li {
     text-transform: uppercase;
 
     padding: 16px 24px;
-    color: #000000;
-    border: 1px solid black;
+    color: white;
+    border: 1px solid white;
     border-radius: 42px;
     text-decoration: none;
     position: fixed;
     bottom: 40px;
     left: 32px;
-    background: white;
+    background: black;
     cursor: default;
 }
 
@@ -135,17 +138,17 @@ li {
 }
 
 .btn:hover {
-    color: red;
-    border: 1px solid red; 
+    color: #2670ca;
+    border: 1px solid #2670ca;
 }
 
 .info {
-    border: 1px solid #000000;
+    border: 1px solid white;
     padding: 24px 96px 24px 16px;
     display: inline-flex;
     flex-flow: column;
-    background: white;
-    box-shadow: 16px 16px rgba(0, 0, 0, 0.1);
+    background: black;
+    box-shadow: 16px 16px rgba(255, 255, 255, 0.1);
     max-width: 960px;
     overflow: scroll;
 }
@@ -165,4 +168,63 @@ li {
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+#canvas2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#canvas3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 8px 56px 49px 16px;
+  }
+
+  h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      letter-spacing: 5px;
+      padding-bottom: 35px;
+    }
+
+    h2 {
+    font-size: 20px;
+    }
+
+    .btn {
+    bottom: 48px;
+    left: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .content {
+      padding: 0;
+    }
+
+    h1 {
+    font-size: 38px;
+    line-height: 1.4;
+    text-align: center;
+    padding-bottom: 16px;
+    }
+
+    h2 {
+    font-size: 18px;
+    text-align: center;
+    }
+
+    .btn {
+    bottom: 48px;
+    left: 74px;
+    }
 }

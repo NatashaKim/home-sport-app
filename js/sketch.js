@@ -1,26 +1,17 @@
 function setup() {
-    // Создаем канвас, как весь браузер
     let myCanvas = createCanvas(windowWidth, windowHeight);
-    // прикрепляем канвас в заранее созданный элемент
     myCanvas.parent("canvas");
-    background(255);
+    background(0);
 }
 
 function draw() {
-    fill(255, 15);
-    noStroke();
-    rect(0, 0, windowWidth, windowHeight);
-
-    stroke(0);
-    if (mouseIsPressed) {
-        fill(0);
-    } else {
-        fill(255);
-    }
-    ellipse(mouseX, mouseY, 80, 80);
+    stroke(mouseX, 0, mouseY);
+    line(0, 0, mouseX, mouseY);
+    line(600, 400, mouseX, mouseY);
+    line(600, 0,  mouseX, mouseY);
+    line(0, 400, mouseX, mouseY);
 }
 
-// Изменяем размер канваса, если изменился размер окна
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
